@@ -21,13 +21,15 @@ public class Main {
     public static String ck () {
         String resultJson = "";
         try{
-            URL url = new URL("http://192.168.0.102:8080/");
+            URL url = new URL("http://192.168.0.102:8087/");
             String query = "12345";
             HttpURLConnection urlConnection;
             urlConnection = (HttpURLConnection) url.openConnection();
-            urlConnection.setRequestMethod("POST");
-            urlConnection.setRequestProperty("email", "MMMemaiul");
-            urlConnection.setRequestProperty("pass", "MMMPas");
+            urlConnection.setRequestMethod("GET");
+            urlConnection.setRequestProperty("Advert", "");
+            urlConnection.setRequestProperty("nev", "");
+            urlConnection.setRequestProperty("Не бует горячей воды", "");
+            urlConnection.setRequestProperty("ERROR", "");
             urlConnection.setDoInput(true);
             urlConnection.setDoOutput(true);
             urlConnection.connect();
